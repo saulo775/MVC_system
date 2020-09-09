@@ -1,9 +1,15 @@
 <?php
 
     namespace Controllers;
-    class ContatoController{
+    class ContatoController extends Controller
+    {
+
+        public function __construct(){
+            $this->view = new \Views\ContatoView('contato');
+        }
+
         public function executar(){
-            echo "<h1>Pagina contato sendo executada!</h1>";
+            $this->view->render();
         }
     }
 ?>
