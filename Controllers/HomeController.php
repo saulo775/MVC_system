@@ -2,8 +2,12 @@
     namespace Controllers;
     class HomeController
     {
+        public function __construct(){
+            $this->view = new \Views\MainView('home');
+        }
+
         public function executar(){
-            echo "<h1>Pagina home sendo executada!</h1>";
+            $this->view->render(array('titulo'=>'Home'));
         }
     }
 ?>
