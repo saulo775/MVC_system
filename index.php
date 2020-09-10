@@ -1,5 +1,10 @@
 <?php
     $autoload = function($class){
+
+        if($class == 'Email'){
+            echo 'carregado';
+            include('phpmailer/PHPMailerAutoload.php');
+        }
         include($class.'.php');
     };
 
