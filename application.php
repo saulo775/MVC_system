@@ -1,5 +1,7 @@
 <?php
 
+    define('INCLUDE_PATH','http://localhost/mvc_system/');
+    define('INCLUDE_PATH_FULL','http://localhost/mvc_system/Views/pages/');
     class Application
     {
         public function executar(){

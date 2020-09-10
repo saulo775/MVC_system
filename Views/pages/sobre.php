@@ -4,7 +4,7 @@
     </div>
 </div>
 <div class="sobre">
-    <h3>Bem vido a nossa empresa</h3>
+    <h3>Sobre Nossa Empresa</h3>
     <p>
         Vestibulum nec vestibulum elit. Praesent turpis est, ullamcorper eget arcu at,
         auctor facilisis dolor. Vivamus at urna imperdiet, consectetur purus quis,
