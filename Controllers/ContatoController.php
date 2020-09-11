@@ -1,19 +1,33 @@
 <?php
 
     namespace Controllers;
-    class ContatoController extends Controller
+
+use Router;
+
+class ContatoController extends Controller
     {
 
         public function __construct(){
-            $this->view = new \Views\MainView('contato');
         }
 
         public function executar(){
             if(isset($_POST['acao'])){
                 \Models\ContatoModel::enviarFormulario();
-                echo '<script>alert("A mensagem foi enviada com sucesso")</script>';
+                echo '<script>location.href="'.INCLUDE_PATH.'contato/sucesso"</script>';
+                die();
             }
-            $this->view->render(array('titulo'=>'Contato'));
+
+            \Router::rota('contato', function(){
+                $this->view->render(array('titulo'=>'contato-sucesso'));
+                $this->view = new \Views\MainView('Contato');
+
+            });
+
+            \Router::rota('contato', function(){
+                $this->view->render(array('titulo'=>'contato'));
+                $this->view = new \Views\MainView('Contato');
+
+            });
         }
     }
 ?>
